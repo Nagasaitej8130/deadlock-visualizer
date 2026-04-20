@@ -56,13 +56,27 @@
     A self-loop (single process) is not a deadlock.
   </p>
 
+  <div  class="group"> >
+    <button onclick="goToSimulator()" style="
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+  "
+  onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 14px rgba(0,0,0,0.4)'"
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.3)'"> Go to Simulator</button>
+  </div>
+
 </div>
 
-<div class="top-bar">
-  <div class="group">
-    <button onclick="goToSimulator()">Go to Simulator</button>
-  </div>
-</div>
+
+  
+
 
 <script>
 function goToSimulator() {
