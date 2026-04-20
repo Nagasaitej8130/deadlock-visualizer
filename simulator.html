@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deadlock Simulator</title>
+
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔝 TOP CONTROL BAR -->
+<div class="top-bar">
+
+  <div class="group">
+    <button onclick="goToLearn()">Learn Deadlock</button>
+    <button onclick="addProcess()">+ Process</button>
+    <button onclick="addResource()">+ Resource</button>
+    <button onclick="deleteProcess()">- Process</button>
+    <button onclick="deleteResource()">- Resource</button>
+    <button onclick="deleteEdge()">- Edge</button>
+  </div>
+
+  <div class="group">
+    <input id="fromNode" placeholder="From (P1)">
+    <input id="toNode" placeholder="To (R1)">
+
+    <select id="edgeType">
+      <option value="request">Request</option>
+      <option value="allocation">Allocation</option>
+    </select>
+
+    <button onclick="addEdgeFromInput()">Add Edge</button>
+  </div>
+
+  <div class="group">
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+    <button class="danger" onclick="checkDeadlock()">Check</button>
+  </div>
+
+</div>
+
+<!-- GRAPH AREA -->
+<div class="graph-panel">
+
+  <div id="network"></div>
+
+  <!-- FLOATING EXPLANATION -->
+  <div class="explanation-box">
+    <h3>Explanation</h3>
+    <p id="explanationText">Build a graph and check for deadlock.</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

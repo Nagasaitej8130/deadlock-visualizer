@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Deadlock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="group">
+    <button onclick="goToSimulator()">Back to Simulator</button>
+  </div>
+</div>
+
+<div class="learn-container">
+
+  <h1>Deadlock in Operating Systems</h1>
+
+  <h2>Definition</h2>
+  <p>
+    A deadlock is a situation where a set of processes are permanently blocked
+    because each process is waiting for a resource held by another process.
+  </p>
+
+  <h2>Basic Idea</h2>
+  <p>
+    Deadlock occurs due to a circular waiting condition. Each process holds a resource
+    and waits for another resource that is already held by another process.
+  </p>
+
+  <h2>Example</h2>
+  <p>
+    Process P1 holds Resource R1 and waits for R2. Process P2 holds R2 and waits for R1.
+    Neither process can proceed, creating a deadlock.
+  </p>
+
+  <h2>Four Necessary Conditions</h2>
+  <ul>
+    <li><b>Mutual Exclusion:</b> Resources cannot be shared.</li>
+    <li><b>Hold and Wait:</b> Processes hold resources while waiting for others.</li>
+    <li><b>No Preemption:</b> Resources cannot be forcibly taken.</li>
+    <li><b>Circular Wait:</b> Processes form a cycle of dependencies.</li>
+  </ul>
+
+  <h2>Graph Representation (RAG)</h2>
+  <ul>
+    <li><b>P → R</b> : Request edge (process is waiting)</li>
+    <li><b>R → P</b> : Allocation edge (resource is assigned)</li>
+  </ul>
+
+  <h2>Key Insight</h2>
+  <p>
+    A cycle in the graph indicates deadlock only when multiple processes are involved.
+    A self-loop (single process) is not a deadlock.
+  </p>
+
+</div>
+
+<script>
+function goToSimulator() {
+  window.location.href = "simulator.html";
+}
+</script>
+
+</body>
+</html>
